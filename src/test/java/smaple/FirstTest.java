@@ -16,7 +16,10 @@ public void testing() {
 	
 	
 	WebDriverManager.chromedriver().setup();
-	WebDriver driver = new ChromeDriver();
+	ChromeOptions chromeOptions = new ChromeOptions();
+	chromeOptions.addArguments("--start-maximized");
+	chromeOptions.addArguments("--remote-allow-origins=*");
+	WebDriver driver = new ChromeDriver(chromeOptions);
 
 	driver.get("https://manappa12sk.azurewebsites.net/webapp/");
 	String expect=driver.findElement(By.xpath("//h1[normalize-space()='RahulShettyAcademy.com Learning']")).getText().trim();
