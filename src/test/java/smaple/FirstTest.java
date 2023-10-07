@@ -13,9 +13,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class FirstTest {
 @Test
 public void testing() {
-	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	
 	
+	WebDriverManager.chromedriver().setup();
 	WebDriver driver = new ChromeDriver();
 
 	driver.get("https://manappa12sk.azurewebsites.net/webapp/");
