@@ -15,7 +15,7 @@ public class FirstTest {
 public void testing() {
 	
 	
-	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 	ChromeOptions chromeOptions = new ChromeOptions();
 	chromeOptions.addArguments("--start-maximized");
 	chromeOptions.addArguments("--remote-allow-origins=*");
